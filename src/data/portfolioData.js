@@ -1,5 +1,5 @@
 export const personalInfo = {
-  name: "Nandana Vinod K",
+  name: "Nandana Vinod",
   title: "Manual Software Tester | QA Engineer | Computer Science Graduate",
   tagline: "Passionate about software quality, identifying defects, validating user experiences, and building reliable applications through structured testing.",
   status: "Open to QA Opportunities",
@@ -239,7 +239,7 @@ export const qaTestingApproach = {
     severity: "High",
     priority: "High",
     status: "Open / Under Investigation",
-    reportedBy: "Nandana Vinod K (QA)",
+    reportedBy: "Nandana Vinod (QA)",
     preconditions: "User is authenticated and has at least one item in the shopping cart.",
     stepsToReproduce: [
       "1. Navigate to the Checkout page from the Cart summary.",

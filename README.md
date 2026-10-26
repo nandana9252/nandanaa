@@ -1,6 +1,6 @@
-# Nandana Vinod K — QA Engineer Portfolio
+# Nandana Vinod — QA Engineer Portfolio
 
-A modern, responsive personal portfolio website for **Nandana Vinod K**, a Computer Science Engineering graduate seeking an entry-level Manual Software Tester / QA Engineer position.
+A modern, responsive personal portfolio website for **Nandana Vinod**, a Computer Science Engineering graduate seeking an entry-level Manual Software Tester / QA Engineer position.
 
 ## 🌟 Highlights & Features
 

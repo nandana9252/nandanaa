@@ -70,7 +70,7 @@ export default function Navbar({ onOpenResume }) {
           <a
             href="#home"
             className="flex items-center gap-3 group focus:outline-none"
-            aria-label="Nandana Vinod K - Home"
+            aria-label="Nandana Vinod - Home"
           >
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-electric-blue/20 to-electric-purple/20 border border-electric-blue/40 group-hover:border-electric-blue transition-all duration-300 shadow-glow-cyan/20">
               <ShieldCheck className="w-5 h-5 text-electric-blue group-hover:text-cyan-300 transition-colors" />
@@ -79,7 +79,7 @@ export default function Navbar({ onOpenResume }) {
             </div>
             <div>
               <span className="font-bold text-base tracking-tight text-white group-hover:text-electric-blue transition-colors flex items-center gap-1.5">
-                Nandana Vinod K
+                Nandana Vinod
               </span>
               <span className="block text-[11px] font-mono tracking-wider text-slate-400 uppercase">
                 QA Engineer

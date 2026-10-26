@@ -48,7 +48,7 @@ export default function ResumeModal({ isOpen, onClose }) {
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-electric-blue" />
             <span className="font-bold text-sm tracking-tight">
-              Nandana Vinod K — QA Resume Preview
+              Nandana Vinod — QA Resume Preview
             </span>
           </div>
 
