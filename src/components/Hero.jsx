@@ -67,9 +67,6 @@ export default function Hero({ onOpenResume }) {
 
             {/* Name Heading */}
             <div className="space-y-2">
-              <span className="text-slate-400 text-sm sm:text-base font-mono font-medium block">
-                👋 Hello World, I'm
-              </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
                 {personalInfo.name}
               </h1>
