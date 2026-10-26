@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import LinkedinIcon from './icons/LinkedinIcon';
 import { personalInfo, educationData, experienceData, skillCategories, additionalVerifiableSkill } from '../data/portfolioData';
+import profileImg from '../assets/profile.jpg';
 
 export default function ResumeModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -75,29 +76,38 @@ export default function ResumeModal({ isOpen, onClose }) {
         <div className="p-6 sm:p-10 overflow-y-auto space-y-8 text-slate-200 text-xs sm:text-sm bg-[#0a0d16] print:bg-white print:text-black">
           
           {/* Resume Header */}
-          <div className="border-b border-slate-800 pb-6 print:border-black">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-white print:text-black tracking-tight">
-              {personalInfo.name}
-            </h1>
-            <p className="text-electric-blue font-bold text-sm sm:text-base mt-1 print:text-blue-700">
-              {personalInfo.title}
-            </p>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-400 print:text-gray-700 mt-3 font-mono">
-              <span className="flex items-center gap-1">
-                <Mail className="w-3.5 h-3.5 text-electric-blue" /> {personalInfo.email}
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1">
-                <Phone className="w-3.5 h-3.5 text-emerald-400" /> {personalInfo.phone}
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1">
-                <LinkedinIcon className="w-3.5 h-3.5 text-blue-400" /> linkedin.com/in/nandana-vinod-k
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5 text-purple-400" /> {personalInfo.location}
-              </span>
+          <div className="border-b border-slate-800 pb-6 print:border-black flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <img
+                src={profileImg}
+                alt={personalInfo.name}
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover object-top border-2 border-electric-blue/40 shadow-sm print:border-gray-400 flex-shrink-0"
+              />
+              <div>
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-white print:text-black tracking-tight">
+                  {personalInfo.name}
+                </h1>
+                <p className="text-electric-blue font-bold text-sm sm:text-base mt-0.5 print:text-blue-700">
+                  {personalInfo.title}
+                </p>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400 print:text-gray-700 mt-2 font-mono">
+                  <span className="flex items-center gap-1">
+                    <Mail className="w-3.5 h-3.5 text-electric-blue" /> {personalInfo.email}
+                  </span>
+                  <span>•</span>
+                  <span className="flex items-center gap-1">
+                    <Phone className="w-3.5 h-3.5 text-emerald-400" /> {personalInfo.phone}
+                  </span>
+                  <span>•</span>
+                  <span className="flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-purple-400" /> {personalInfo.location}
+                  </span>
+                  <span>•</span>
+                  <span className="flex items-center gap-1">
+                    <LinkedinIcon className="w-3.5 h-3.5 text-blue-400" /> linkedin.com/in/nandana-vinod-k
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 

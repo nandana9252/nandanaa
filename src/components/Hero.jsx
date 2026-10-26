@@ -14,6 +14,7 @@ import {
   Layers
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import profileImg from '../assets/profile.jpg';
 
 export default function Hero({ onOpenResume }) {
   const [activeStep, setActiveStep] = useState(0);
@@ -130,124 +131,113 @@ export default function Hero({ onOpenResume }) {
             </div>
           </div>
 
-          {/* Right Column: Abstract Technology & QA Visual */}
+          {/* Right Column: Profile Photo & Interactive QA Diagnostics */}
           <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative w-full max-w-md">
+            <div className="relative w-full max-w-sm sm:max-w-md space-y-4">
               
               {/* Outer Decorative Glow Rings */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-electric-blue/30 via-purple-600/30 to-pink-500/20 rounded-3xl blur-xl opacity-75 animate-pulse-subtle pointer-events-none" />
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-electric-blue/30 via-purple-600/30 to-pink-500/20 rounded-3xl blur-2xl opacity-70 pointer-events-none" />
               
-              {/* Main Interactive Diagnostics Card */}
-              <div className="relative bg-dark-900/95 border border-slate-700/80 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl">
-                
-                {/* Window Header */}
-                <div className="flex items-center justify-between pb-4 border-b border-slate-800 mb-5">
-                  <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-                    <span className="text-xs font-mono text-slate-400 ml-2">qa-inspector.terminal</span>
+              {/* Profile Photo Card */}
+              <div className="relative bg-dark-900/90 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-xl group">
+                <div className="relative aspect-[3.8/4.6] overflow-hidden bg-gradient-to-b from-slate-900/40 via-dark-900/60 to-dark-950">
+                  <img
+                    src={profileImg}
+                    alt="Nandana Vinod - Manual Software Tester & QA Engineer"
+                    className="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[1.02] transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Subtle Gradient Vignette at Bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent pointer-events-none" />
+
+                  {/* Top-Right Pill Badge */}
+                  <div className="absolute top-3.5 right-3.5 flex items-center gap-1.5 px-3 py-1 rounded-full bg-dark-950/85 backdrop-blur-md border border-emerald-500/40 text-[11px] font-mono text-emerald-300 shadow-lg">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <span>Open to QA Roles</span>
                   </div>
-                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/40 text-[10px] font-mono text-emerald-400">
+
+                  {/* Bottom Photo Overlay */}
+                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-dark-950/85 backdrop-blur-md border border-slate-800/80 flex items-center justify-between">
+                    <div>
+                      <div className="text-sm font-bold text-white flex items-center gap-1.5">
+                        <span>Nandana Vinod</span>
+                        <ShieldCheck className="w-4 h-4 text-electric-blue" />
+                      </div>
+                      <span className="text-[11px] font-mono text-slate-400 block">
+                        Manual Software Tester / QA
+                      </span>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-[10px] font-mono uppercase text-slate-500 block">Focus</span>
+                      <span className="text-xs font-semibold text-emerald-400">Quality First</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Integrated Mini QA Diagnostics Bar */}
+                <div className="p-3.5 bg-dark-950/95 border-t border-slate-800 grid grid-cols-3 gap-2 text-center text-xs font-mono">
+                  <div className="p-2 rounded-xl bg-slate-900/80 border border-slate-800/80">
+                    <span className="text-[10px] text-slate-400 block mb-0.5">Test Suite</span>
+                    <span className="text-white font-bold text-sm">42/42</span>
+                  </div>
+                  <div className="p-2 rounded-xl bg-slate-900/80 border border-slate-800/80">
+                    <span className="text-[10px] text-emerald-400 block mb-0.5">Pass Rate</span>
+                    <span className="text-emerald-400 font-bold text-sm">97.6%</span>
+                  </div>
+                  <div className="p-2 rounded-xl bg-slate-900/80 border border-slate-800/80">
+                    <span className="text-[10px] text-rose-400 block mb-0.5">Defect Caught</span>
+                    <span className="text-rose-400 font-bold text-sm">01 (P1)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Live Test Case Monitor Snippet */}
+              <div className="p-3 rounded-2xl bg-dark-900/90 border border-slate-800 shadow-lg text-xs font-mono space-y-1.5">
+                <div className="flex items-center justify-between px-1 text-[11px] text-slate-400">
+                  <span className="flex items-center gap-1.5 text-slate-300">
+                    <Terminal className="w-3.5 h-3.5 text-electric-blue" />
+                    <span>Live Test Verification</span>
+                  </span>
+                  <span className="text-[10px] text-emerald-400 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    SUITE LIVE
-                  </div>
+                    STLC Active
+                  </span>
                 </div>
 
-                {/* Dashboard Metrics */}
-                <div className="grid grid-cols-3 gap-2.5 mb-5">
-                  <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-center">
-                    <div className="text-xs text-slate-400 font-mono mb-1">Executed</div>
-                    <div className="text-xl font-bold font-mono text-white">42/42</div>
-                    <span className="text-[10px] text-emerald-400">100% complete</span>
+                {testSteps.slice(activeStep, activeStep + 1).map((step) => (
+                  <div
+                    key={step.id}
+                    className="p-2.5 rounded-xl bg-slate-950/80 border border-electric-blue/40 flex items-center justify-between transition-all"
+                  >
+                    <div className="flex items-center gap-2 truncate">
+                      {step.status === 'PASS' ? (
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                      ) : (
+                        <Bug className="w-4 h-4 text-rose-400 flex-shrink-0 animate-bounce" />
+                      )}
+                      <span className="text-slate-200 text-xs truncate">{step.name}</span>
+                    </div>
+                    <span
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold ml-2 ${
+                        step.status === 'PASS'
+                          ? 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'
+                          : 'bg-rose-950/80 text-rose-400 border border-rose-500/30'
+                      }`}
+                    >
+                      {step.status}
+                    </span>
                   </div>
-                  <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-center">
-                    <div className="text-xs text-slate-400 font-mono mb-1">Passed</div>
-                    <div className="text-xl font-bold font-mono text-emerald-400">41</div>
-                    <span className="text-[10px] text-slate-400">97.6% rate</span>
-                  </div>
-                  <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 text-center">
-                    <div className="text-xs text-slate-400 font-mono mb-1">Defects</div>
-                    <div className="text-xl font-bold font-mono text-rose-400">01</div>
-                    <span className="text-[10px] text-rose-300">P1 isolated</span>
-                  </div>
-                </div>
-
-                {/* Live Test Case Monitor */}
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center justify-between text-xs text-slate-400 font-mono px-1">
-                    <span>Recent Test Executions</span>
-                    <span className="text-[10px] text-slate-500">v2.4-staging</span>
-                  </div>
-
-                  <div className="space-y-2">
-                    {testSteps.map((step, idx) => {
-                      const isHighlighted = idx === activeStep;
-                      return (
-                        <div
-                          key={step.id}
-                          className={`p-2.5 rounded-xl border transition-all duration-300 flex items-center justify-between font-mono text-xs ${
-                            isHighlighted
-                              ? 'bg-slate-800/80 border-electric-blue/50 shadow-sm'
-                              : 'bg-slate-950/50 border-slate-800/60 opacity-80'
-                          }`}
-                        >
-                          <div className="flex items-center gap-2 min-w-0">
-                            {step.status === 'PASS' ? (
-                              <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                            ) : (
-                              <Bug className="w-4 h-4 text-rose-400 flex-shrink-0 animate-bounce" />
-                            )}
-                            <div className="truncate">
-                              <span className="text-slate-400 mr-2 text-[11px]">{step.id}</span>
-                              <span className="text-slate-200 font-sans text-xs">{step.name}</span>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-2 flex-shrink-0 ml-2">
-                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400">
-                              {step.type}
-                            </span>
-                            <span
-                              className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                                step.status === 'PASS'
-                                  ? 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'
-                                  : 'bg-rose-950/80 text-rose-400 border border-rose-500/30'
-                              }`}
-                            >
-                              {step.status}
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Footer badge inside card */}
-                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-                  <div className="flex items-center gap-1.5 text-slate-300">
-                    <Sparkles className="w-3.5 h-3.5 text-electric-blue" />
-                    <span>Quality Assurance Ready</span>
-                  </div>
-                  <span className="font-mono text-slate-500">STLC Cycle 3</span>
-                </div>
+                ))}
               </div>
 
               {/* Floating Quality Gate Badge */}
-              <div className="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 bg-dark-900/95 border border-purple-500/40 rounded-2xl px-4 py-2.5 shadow-xl backdrop-blur-md flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 bg-dark-900/95 border border-purple-500/40 rounded-2xl px-3.5 py-2 shadow-xl backdrop-blur-md flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                  <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white">Quality Mindset</div>
-                  <div className="text-[10px] text-slate-400">Zero Critical Defects to Production</div>
+                  <div className="text-[11px] font-bold text-white">Quality Mindset</div>
+                  <div className="text-[9px] text-slate-400">Zero Critical Leaks</div>
                 </div>
-              </div>
-
-              {/* Floating Defect Badge */}
-              <div className="hidden sm:flex absolute -top-4 -right-4 bg-dark-900/95 border border-cyan-500/40 rounded-2xl px-3.5 py-2 shadow-xl backdrop-blur-md items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-                <span className="text-xs font-mono text-cyan-300">Manual & Functional QA</span>
               </div>
 
             </div>
